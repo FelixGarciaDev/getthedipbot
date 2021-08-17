@@ -52,6 +52,9 @@ def getUserChatStatus(user):
         sql = f'SELECT `Active` FROM `chats` WHERE `Chat_id`={user.id}'        
         if (cursor.execute(sql)) is not None:
             result = cursor.fetchall()
-            return result 
+            if len(result) > 1:
+                print("impossible situation, at getUserChatStatus")
+                return None 
+            return result
         else:
             return None

@@ -58,7 +58,15 @@ def disable_command(update: Update, context: CallbackContext):
 
 def status_command(update: Update, context: CallbackContext):
     user = update.effective_user
-    update.message.reply_text("this command is still under construction 🤓")
+    status = db.getUserChatStatus(user)
+    if status is not None:
+            if status[0]["Active"] == 1:
+                update.message.reply_text(f'Your status is ENABLE ✅\nand you will get dips messages 🥳')
+                return True
+            else:
+                update.message.reply_text(f'Your status is DISABLE ✅\nand you will NOT get dips messages 😪\n\n/enable again dips messages')
+                return True
+    
 
 # tell to individual user about dips
 def dips_command(update: Update, context: CallbackContext):
