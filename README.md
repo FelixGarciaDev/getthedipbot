@@ -1,6 +1,6 @@
-#You can finally BUY THE DIP 🤑
+# You can finally BUY THE DIP 🤑
 
-##Disclaimer: This bot does not provide investment advice, every trade operation is at your own risk 🤓
+## Disclaimer: This bot does not provide investment advice, every trade operation is at your own risk 🤓
 
 This bot will notify you when an asset has a drop greater than -10% in Binance (24h Change) 🐻
 
